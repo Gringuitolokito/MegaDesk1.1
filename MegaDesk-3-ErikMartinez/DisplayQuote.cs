@@ -16,5 +16,11 @@ namespace MegaDesk_3_ErikMartinez
         {
             InitializeComponent();
         }
+
+        private void DisplayQuote_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+        }
     }
 }

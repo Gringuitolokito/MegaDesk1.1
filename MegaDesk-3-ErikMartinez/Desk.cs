@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_3_ErikMartinez
 {
-    class Desk
+    public class Desk
     {
+        public int Width { get; set; }
+        public int Depth { get; set; }
     }
 }

@@ -23,5 +23,17 @@ namespace MegaDesk_3_ErikMartinez
             mainMenu.Show();
             Close();
         }
+
+        private void AddQuote_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+        }
+
+        private void addNewQoute_Button_Click(object sender, EventArgs e)
+        {
+            var desk = new Desk();
+            desk.Width = Int32.Parse(widthTextBox.Text);
+        }
     }
 }

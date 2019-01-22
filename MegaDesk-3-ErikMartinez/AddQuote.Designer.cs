@@ -69,6 +69,7 @@
             this.addNewQoute_Button.TabIndex = 1;
             this.addNewQoute_Button.Text = "Add";
             this.addNewQoute_Button.UseVisualStyleBackColor = true;
+            this.addNewQoute_Button.Click += new System.EventHandler(this.addNewQoute_Button_Click);
             // 
             // customerNameLabel
             // 
@@ -274,6 +275,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddQuote";
             this.Text = "AddQuote";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddQuote_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

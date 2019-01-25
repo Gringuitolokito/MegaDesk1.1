@@ -56,7 +56,7 @@
             this.cancelButton.Location = new System.Drawing.Point(156, 393);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(122, 46);
-            this.cancelButton.TabIndex = 0;
+            this.cancelButton.TabIndex = 8;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -66,7 +66,7 @@
             this.addNewQoute_Button.Location = new System.Drawing.Point(501, 393);
             this.addNewQoute_Button.Name = "addNewQoute_Button";
             this.addNewQoute_Button.Size = new System.Drawing.Size(122, 46);
-            this.addNewQoute_Button.TabIndex = 1;
+            this.addNewQoute_Button.TabIndex = 7;
             this.addNewQoute_Button.Text = "Add";
             this.addNewQoute_Button.UseVisualStyleBackColor = true;
             this.addNewQoute_Button.Click += new System.EventHandler(this.addNewQoute_Button_Click);
@@ -87,7 +87,7 @@
             this.customerNameTextBox.Location = new System.Drawing.Point(402, 40);
             this.customerNameTextBox.Name = "customerNameTextBox";
             this.customerNameTextBox.Size = new System.Drawing.Size(122, 27);
-            this.customerNameTextBox.TabIndex = 5;
+            this.customerNameTextBox.TabIndex = 1;
             // 
             // widthLabel
             // 
@@ -115,7 +115,8 @@
             this.widthTextBox.Location = new System.Drawing.Point(215, 104);
             this.widthTextBox.Name = "widthTextBox";
             this.widthTextBox.Size = new System.Drawing.Size(77, 27);
-            this.widthTextBox.TabIndex = 8;
+            this.widthTextBox.TabIndex = 2;
+            this.widthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.widthTextBox_Validating);
             // 
             // depthTextBox
             // 
@@ -123,7 +124,8 @@
             this.depthTextBox.Location = new System.Drawing.Point(215, 174);
             this.depthTextBox.Name = "depthTextBox";
             this.depthTextBox.Size = new System.Drawing.Size(77, 27);
-            this.depthTextBox.TabIndex = 9;
+            this.depthTextBox.TabIndex = 3;
+            this.depthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.depthTextBox_Validating);
             // 
             // label1
             // 
@@ -159,7 +161,7 @@
             this.drawerTextBox.Location = new System.Drawing.Point(546, 99);
             this.drawerTextBox.Name = "drawerTextBox";
             this.drawerTextBox.Size = new System.Drawing.Size(77, 27);
-            this.drawerTextBox.TabIndex = 13;
+            this.drawerTextBox.TabIndex = 4;
             // 
             // label3
             // 
@@ -193,7 +195,7 @@
             this.surfaceMaterialComboBox.Location = new System.Drawing.Point(520, 169);
             this.surfaceMaterialComboBox.Name = "surfaceMaterialComboBox";
             this.surfaceMaterialComboBox.Size = new System.Drawing.Size(103, 28);
-            this.surfaceMaterialComboBox.TabIndex = 16;
+            this.surfaceMaterialComboBox.TabIndex = 5;
             // 
             // deliveryLabel
             // 
@@ -216,7 +218,7 @@
             this.deliveryComboBox.Location = new System.Drawing.Point(520, 220);
             this.deliveryComboBox.Name = "deliveryComboBox";
             this.deliveryComboBox.Size = new System.Drawing.Size(103, 28);
-            this.deliveryComboBox.TabIndex = 18;
+            this.deliveryComboBox.TabIndex = 6;
             // 
             // totalLabel
             // 

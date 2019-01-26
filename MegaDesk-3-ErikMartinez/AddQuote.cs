@@ -47,7 +47,7 @@ namespace MegaDesk_3_ErikMartinez
                 {
                     MessageBox.Show("Please enter a width from " + Desk.MINWIDTH + " to " + Desk.MAXWIDTH + " inches");
                     widthTextBox.Text = String.Empty;
-                    widthTextBox.BackColor = Color.DarkOrange;
+                    widthTextBox.BackColor = Color.Yellow;
                     widthTextBox.Focus();
                 }
                 else
@@ -59,7 +59,7 @@ namespace MegaDesk_3_ErikMartinez
             {
                 MessageBox.Show("Please enter a number");
                 widthTextBox.Text = String.Empty;
-                widthTextBox.BackColor = Color.DarkOrange;
+                widthTextBox.BackColor = Color.Yellow;
                 widthTextBox.Focus();
             }
             else
@@ -76,7 +76,7 @@ namespace MegaDesk_3_ErikMartinez
                 {
                     MessageBox.Show("Please enter a width from " + Desk.MINDEPTH + " to " + Desk.MAXDEPTH + " inches");
                     depthTextBox.Text = String.Empty;
-                    depthTextBox.BackColor = Color.DarkOrange;
+                    depthTextBox.BackColor = Color.Yellow;
                     depthTextBox.Focus();
                 }
                 else
@@ -88,7 +88,7 @@ namespace MegaDesk_3_ErikMartinez
             {
                 MessageBox.Show("Please enter a number");
                 depthTextBox.Text = String.Empty;
-                depthTextBox.BackColor = Color.DarkOrange;
+                depthTextBox.BackColor = Color.Yellow;
                 depthTextBox.Focus();
             }
             else

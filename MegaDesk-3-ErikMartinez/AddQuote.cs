@@ -96,5 +96,35 @@ namespace MegaDesk_3_ErikMartinez
                 depthTextBox.BackColor = System.Drawing.SystemColors.Window;
             }
         }
+
+        private void drawerTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (int.TryParse(drawerTextBox.Text, out int DepthInput) == true)
+            {
+                if (DepthInput < Desk.MINDRAWER || DepthInput > Desk.MAXDRAWER)
+                {
+                    MessageBox.Show("Please enter a width from " + Desk.MINDRAWER + " to " + Desk.MAXDRAWER + " inches");
+                    drawerTextBox.Text = String.Empty;
+                    drawerTextBox.BackColor = Color.Yellow;
+                    drawerTextBox.Focus();
+                }
+                else
+                {
+                    drawerTextBox.BackColor = System.Drawing.SystemColors.Window;
+                }
+            }
+            else if (int.TryParse(drawerTextBox.Text, out DepthInput) == false && drawerTextBox.Text.Length != 0)
+            {
+                MessageBox.Show("Please enter a number");
+                drawerTextBox.Text = String.Empty;
+                drawerTextBox.BackColor = Color.Yellow;
+                drawerTextBox.Focus();
+            }
+            else
+            {
+                drawerTextBox.BackColor = System.Drawing.SystemColors.Window;
+            }
+
+        }
     }
 }

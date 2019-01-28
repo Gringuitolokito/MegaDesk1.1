@@ -19,5 +19,7 @@ namespace MegaDesk_3_ErikMartinez
         public const int MAXWIDTH = 96;
         public const int MINDEPTH = 12;
         public const int MAXDEPTH = 48;
+        public const int MINDRAWER = 0;
+        public const int MAXDRAWER = 7;
     }
 }

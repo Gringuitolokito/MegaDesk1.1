@@ -162,6 +162,7 @@
             this.drawerTextBox.Name = "drawerTextBox";
             this.drawerTextBox.Size = new System.Drawing.Size(77, 27);
             this.drawerTextBox.TabIndex = 4;
+            this.drawerTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.drawerTextBox_Validating);
             // 
             // label3
             // 
@@ -170,7 +171,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 17);
             this.label3.TabIndex = 14;
-            this.label3.Text = "(min of 1 and max of 7)";
+            this.label3.Text = "(min of 0 and max of 7)";
             // 
             // surfMatLabel
             // 

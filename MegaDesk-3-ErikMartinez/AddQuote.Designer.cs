@@ -35,7 +35,6 @@
             this.customerNameTextBox = new System.Windows.Forms.TextBox();
             this.widthLabel = new System.Windows.Forms.Label();
             this.depthLabel = new System.Windows.Forms.Label();
-            this.widthTextBox = new System.Windows.Forms.TextBox();
             this.depthTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.widthTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -108,15 +108,6 @@
             this.depthLabel.Size = new System.Drawing.Size(59, 20);
             this.depthLabel.TabIndex = 7;
             this.depthLabel.Text = "Depth:";
-            // 
-            // widthTextBox
-            // 
-            this.widthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.widthTextBox.Location = new System.Drawing.Point(215, 104);
-            this.widthTextBox.Name = "widthTextBox";
-            this.widthTextBox.Size = new System.Drawing.Size(77, 27);
-            this.widthTextBox.TabIndex = 2;
-            this.widthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.widthTextBox_Validating);
             // 
             // depthTextBox
             // 
@@ -248,6 +239,15 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "(given normal production time of 14 days)";
             // 
+            // widthTextBox
+            // 
+            this.widthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.widthTextBox.Location = new System.Drawing.Point(215, 104);
+            this.widthTextBox.Name = "widthTextBox";
+            this.widthTextBox.Size = new System.Drawing.Size(77, 27);
+            this.widthTextBox.TabIndex = 2;
+            this.widthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.widthTextBox_Validating);
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -292,7 +292,6 @@
         private System.Windows.Forms.TextBox customerNameTextBox;
         private System.Windows.Forms.Label widthLabel;
         private System.Windows.Forms.Label depthLabel;
-        private System.Windows.Forms.TextBox widthTextBox;
         private System.Windows.Forms.TextBox depthTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -306,5 +305,6 @@
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox widthTextBox;
     }
 }

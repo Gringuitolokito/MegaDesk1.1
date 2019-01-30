@@ -1,0 +1,14 @@
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk-4-ErikMartinez.csprojAssemblyReference.cache
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk_3_ErikMartinez.AddQuote.resources
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk_3_ErikMartinez.DisplayQuote.resources
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk_3_ErikMartinez.MainMenu.resources
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk_4_ErikMartinez.Properties.Resources.resources
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk_3_ErikMartinez.SearchQuotes.resources
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk_3_ErikMartinez.ViewAllQuotes.resources
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk-4-ErikMartinez.csproj.GenerateResource.cache
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk-4-ErikMartinez.csproj.CoreCompileInputs.cache
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\bin\Debug\MegaDesk-4-ErikMartinez.exe.config
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\bin\Debug\MegaDesk-4-ErikMartinez.exe
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\bin\Debug\MegaDesk-4-ErikMartinez.pdb
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk-4-ErikMartinez.exe
+C:\Users\ErikM\Documents\GitHub\MegaDesk1.1\MegaDesk-4-ErikMartinez\obj\Debug\MegaDesk-4-ErikMartinez.pdb

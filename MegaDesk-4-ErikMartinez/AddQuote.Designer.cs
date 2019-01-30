@@ -35,11 +35,9 @@
             this.customerNameTextBox = new System.Windows.Forms.TextBox();
             this.widthLabel = new System.Windows.Forms.Label();
             this.depthLabel = new System.Windows.Forms.Label();
-            this.depthTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.drawerLabel = new System.Windows.Forms.Label();
-            this.drawerTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.surfMatLabel = new System.Windows.Forms.Label();
             this.surfaceMaterialComboBox = new System.Windows.Forms.ComboBox();
@@ -47,8 +45,12 @@
             this.deliveryComboBox = new System.Windows.Forms.ComboBox();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.widthTextBox = new System.Windows.Forms.TextBox();
+            this.widthNumeric = new System.Windows.Forms.NumericUpDown();
+            this.depthNumeric = new System.Windows.Forms.NumericUpDown();
+            this.drawersNumeric = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depthNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drawersNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -75,7 +77,7 @@
             // 
             this.customerNameLabel.AutoSize = true;
             this.customerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerNameLabel.Location = new System.Drawing.Point(249, 43);
+            this.customerNameLabel.Location = new System.Drawing.Point(152, 43);
             this.customerNameLabel.Name = "customerNameLabel";
             this.customerNameLabel.Size = new System.Drawing.Size(136, 20);
             this.customerNameLabel.TabIndex = 2;
@@ -84,9 +86,9 @@
             // customerNameTextBox
             // 
             this.customerNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerNameTextBox.Location = new System.Drawing.Point(402, 40);
+            this.customerNameTextBox.Location = new System.Drawing.Point(298, 40);
             this.customerNameTextBox.Name = "customerNameTextBox";
-            this.customerNameTextBox.Size = new System.Drawing.Size(122, 27);
+            this.customerNameTextBox.Size = new System.Drawing.Size(226, 27);
             this.customerNameTextBox.TabIndex = 1;
             // 
             // widthLabel
@@ -108,15 +110,6 @@
             this.depthLabel.Size = new System.Drawing.Size(59, 20);
             this.depthLabel.TabIndex = 7;
             this.depthLabel.Text = "Depth:";
-            // 
-            // depthTextBox
-            // 
-            this.depthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.depthTextBox.Location = new System.Drawing.Point(215, 174);
-            this.depthTextBox.Name = "depthTextBox";
-            this.depthTextBox.Size = new System.Drawing.Size(77, 27);
-            this.depthTextBox.TabIndex = 3;
-            this.depthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.depthTextBox_Validating);
             // 
             // label1
             // 
@@ -145,15 +138,6 @@
             this.drawerLabel.Size = new System.Drawing.Size(175, 20);
             this.drawerLabel.TabIndex = 12;
             this.drawerLabel.Text = "Number Of Drawers:  ";
-            // 
-            // drawerTextBox
-            // 
-            this.drawerTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawerTextBox.Location = new System.Drawing.Point(546, 99);
-            this.drawerTextBox.Name = "drawerTextBox";
-            this.drawerTextBox.Size = new System.Drawing.Size(77, 27);
-            this.drawerTextBox.TabIndex = 4;
-            this.drawerTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.drawerTextBox_Validating);
             // 
             // label3
             // 
@@ -186,14 +170,14 @@
             "Pine"});
             this.surfaceMaterialComboBox.Location = new System.Drawing.Point(520, 169);
             this.surfaceMaterialComboBox.Name = "surfaceMaterialComboBox";
-            this.surfaceMaterialComboBox.Size = new System.Drawing.Size(103, 28);
+            this.surfaceMaterialComboBox.Size = new System.Drawing.Size(108, 28);
             this.surfaceMaterialComboBox.TabIndex = 5;
             // 
             // deliveryLabel
             // 
             this.deliveryLabel.AutoSize = true;
             this.deliveryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryLabel.Location = new System.Drawing.Point(429, 223);
+            this.deliveryLabel.Location = new System.Drawing.Point(372, 231);
             this.deliveryLabel.Name = "deliveryLabel";
             this.deliveryLabel.Size = new System.Drawing.Size(85, 20);
             this.deliveryLabel.TabIndex = 17;
@@ -204,19 +188,20 @@
             this.deliveryComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deliveryComboBox.FormattingEnabled = true;
             this.deliveryComboBox.Items.AddRange(new object[] {
-            "3 Days",
-            "5 Days",
-            "7 Days"});
-            this.deliveryComboBox.Location = new System.Drawing.Point(520, 220);
+            "Rush 3 Days",
+            "Rush 5 Days",
+            "Rush 7 Days",
+            "No Rush 14 Days"});
+            this.deliveryComboBox.Location = new System.Drawing.Point(463, 228);
             this.deliveryComboBox.Name = "deliveryComboBox";
-            this.deliveryComboBox.Size = new System.Drawing.Size(103, 28);
+            this.deliveryComboBox.Size = new System.Drawing.Size(165, 28);
             this.deliveryComboBox.TabIndex = 6;
             // 
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.Location = new System.Drawing.Point(324, 346);
+            this.totalLabel.Location = new System.Drawing.Point(463, 306);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(61, 20);
             this.totalLabel.TabIndex = 19;
@@ -225,36 +210,79 @@
             // totalTextBox
             // 
             this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox.Location = new System.Drawing.Point(402, 343);
+            this.totalTextBox.Location = new System.Drawing.Point(541, 303);
             this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(77, 27);
+            this.totalTextBox.Size = new System.Drawing.Size(87, 27);
             this.totalTextBox.TabIndex = 20;
             // 
-            // label4
+            // widthNumeric
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(371, 251);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(270, 17);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "(given normal production time of 14 days)";
+            this.widthNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.widthNumeric.Location = new System.Drawing.Point(215, 105);
+            this.widthNumeric.Maximum = new decimal(new int[] {
+            96,
+            0,
+            0,
+            0});
+            this.widthNumeric.Minimum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.widthNumeric.Name = "widthNumeric";
+            this.widthNumeric.Size = new System.Drawing.Size(77, 27);
+            this.widthNumeric.TabIndex = 2;
+            this.widthNumeric.Value = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             // 
-            // widthTextBox
+            // depthNumeric
             // 
-            this.widthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.widthTextBox.Location = new System.Drawing.Point(215, 104);
-            this.widthTextBox.Name = "widthTextBox";
-            this.widthTextBox.Size = new System.Drawing.Size(77, 27);
-            this.widthTextBox.TabIndex = 2;
-            this.widthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.widthTextBox_Validating);
+            this.depthNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depthNumeric.Location = new System.Drawing.Point(215, 175);
+            this.depthNumeric.Maximum = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.depthNumeric.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.depthNumeric.Name = "depthNumeric";
+            this.depthNumeric.Size = new System.Drawing.Size(77, 27);
+            this.depthNumeric.TabIndex = 3;
+            this.depthNumeric.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            // 
+            // drawersNumeric
+            // 
+            this.drawersNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawersNumeric.Location = new System.Drawing.Point(551, 100);
+            this.drawersNumeric.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.drawersNumeric.Name = "drawersNumeric";
+            this.drawersNumeric.Size = new System.Drawing.Size(77, 27);
+            this.drawersNumeric.TabIndex = 4;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(800, 473);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(803, 510);
+            this.Controls.Add(this.drawersNumeric);
+            this.Controls.Add(this.depthNumeric);
+            this.Controls.Add(this.widthNumeric);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.deliveryComboBox);
@@ -262,12 +290,9 @@
             this.Controls.Add(this.surfaceMaterialComboBox);
             this.Controls.Add(this.surfMatLabel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.drawerTextBox);
             this.Controls.Add(this.drawerLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.depthTextBox);
-            this.Controls.Add(this.widthTextBox);
             this.Controls.Add(this.depthLabel);
             this.Controls.Add(this.widthLabel);
             this.Controls.Add(this.customerNameTextBox);
@@ -279,6 +304,9 @@
             this.Name = "AddQuote";
             this.Text = "AddQuote";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddQuote_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.widthNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depthNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drawersNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,11 +320,9 @@
         private System.Windows.Forms.TextBox customerNameTextBox;
         private System.Windows.Forms.Label widthLabel;
         private System.Windows.Forms.Label depthLabel;
-        private System.Windows.Forms.TextBox depthTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label drawerLabel;
-        private System.Windows.Forms.TextBox drawerTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label surfMatLabel;
         private System.Windows.Forms.ComboBox surfaceMaterialComboBox;
@@ -304,7 +330,8 @@
         private System.Windows.Forms.ComboBox deliveryComboBox;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.TextBox totalTextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox widthTextBox;
+        private System.Windows.Forms.NumericUpDown widthNumeric;
+        private System.Windows.Forms.NumericUpDown depthNumeric;
+        private System.Windows.Forms.NumericUpDown drawersNumeric;
     }
 }

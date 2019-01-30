@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,98 +34,14 @@ namespace MegaDesk_3_ErikMartinez
         private void addNewQoute_Button_Click(object sender, EventArgs e)
         {
             var desk = new Desk();
-            desk.Width = Int32.Parse(widthTextBox.Text);
-            desk.Depth = Int32.Parse(depthTextBox.Text);
-            desk.Drawers = Int32.Parse(drawerTextBox.Text);
-            
-        }
+            desk.Width = widthNumeric.Value;
+            desk.Depth = depthNumeric.Value;
+            desk.Drawers = (int)drawersNumeric.Value;
+            desk.SurfaceMaterial = (Desk.Surface)surfaceMaterialComboBox.SelectedIndex;
+            desk.DeliveryChoice = (Desk.Delivery)deliveryComboBox.SelectedIndex;
 
-        private void widthTextBox_Validating(object sender, CancelEventArgs e)
-        {
-            if (int.TryParse(widthTextBox.Text, out int WidthInput) == true)
-            {
-                if (WidthInput < Desk.MINWIDTH || WidthInput > Desk.MAXWIDTH)
-                {
-                    MessageBox.Show("Please enter a width from " + Desk.MINWIDTH + " to " + Desk.MAXWIDTH + " inches");
-                    widthTextBox.Text = String.Empty;
-                    widthTextBox.BackColor = Color.Yellow;
-                    widthTextBox.Focus();
-                }
-                else
-                {
-                    widthTextBox.BackColor = System.Drawing.SystemColors.Window;
-                }
-            }
-            else if (int.TryParse(widthTextBox.Text, out WidthInput) == false && widthTextBox.Text.Length != 0)
-            {
-                MessageBox.Show("Please enter a number");
-                widthTextBox.Text = String.Empty;
-                widthTextBox.BackColor = Color.Yellow;
-                widthTextBox.Focus();
-            }
-            else
-            {
-                widthTextBox.BackColor = System.Drawing.SystemColors.Window;
-            }
-        }
-
-        private void depthTextBox_Validating(object sender, CancelEventArgs e)
-        {
-            if (int.TryParse(depthTextBox.Text, out int DepthInput) == true)
-            {
-                if (DepthInput < Desk.MINDEPTH || DepthInput > Desk.MAXDEPTH)
-                {
-                    MessageBox.Show("Please enter a width from " + Desk.MINDEPTH + " to " + Desk.MAXDEPTH + " inches");
-                    depthTextBox.Text = String.Empty;
-                    depthTextBox.BackColor = Color.Yellow;
-                    depthTextBox.Focus();
-                }
-                else
-                {
-                    depthTextBox.BackColor = System.Drawing.SystemColors.Window;
-                }
-            }
-            else if (int.TryParse(depthTextBox.Text, out DepthInput) == false && depthTextBox.Text.Length != 0)
-            {
-                MessageBox.Show("Please enter a number");
-                depthTextBox.Text = String.Empty;
-                depthTextBox.BackColor = Color.Yellow;
-                depthTextBox.Focus();
-            }
-            else
-            {
-                depthTextBox.BackColor = System.Drawing.SystemColors.Window;
-            }
-        }
-
-        private void drawerTextBox_Validating(object sender, CancelEventArgs e)
-        {
-            if (int.TryParse(drawerTextBox.Text, out int DepthInput) == true)
-            {
-                if (DepthInput < Desk.MINDRAWER || DepthInput > Desk.MAXDRAWER)
-                {
-                    MessageBox.Show("Please enter a width from " + Desk.MINDRAWER + " to " + Desk.MAXDRAWER + " inches");
-                    drawerTextBox.Text = String.Empty;
-                    drawerTextBox.BackColor = Color.Yellow;
-                    drawerTextBox.Focus();
-                }
-                else
-                {
-                    drawerTextBox.BackColor = System.Drawing.SystemColors.Window;
-                }
-            }
-            else if (int.TryParse(drawerTextBox.Text, out DepthInput) == false && drawerTextBox.Text.Length != 0)
-            {
-                MessageBox.Show("Please enter a number");
-                drawerTextBox.Text = String.Empty;
-                drawerTextBox.BackColor = Color.Yellow;
-                drawerTextBox.Focus();
-            }
-            else
-            {
-                drawerTextBox.BackColor = System.Drawing.SystemColors.Window;
-            }
-
+            StreamWriter writer;
+            writer = new StreamWriter("quotes.txt");
         }
     }
 }

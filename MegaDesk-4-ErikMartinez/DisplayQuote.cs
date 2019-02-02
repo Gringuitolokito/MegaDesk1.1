@@ -12,9 +12,19 @@ namespace MegaDesk_3_ErikMartinez
 {
     public partial class DisplayQuote : Form
     {
-        public DisplayQuote()
+        public DisplayQuote(DeskQuote deskQuote)
         {
+
             InitializeComponent();
+
+            lblCustomerName.Text = deskQuote.CustomerName;
+            //lbWidth;
+            //lbDepth;
+            //lbDrawers;
+            //lbSurfaceMaterial;
+            //lbDelivery;
+            
+
         }
 
         private void DisplayQuote_FormClosing(object sender, FormClosingEventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MegaDesk_3_ErikMartinez
 {
@@ -28,6 +29,36 @@ namespace MegaDesk_3_ErikMartinez
         {
             var mainMenu = (MainMenu)Tag;
             mainMenu.Show();
+        }
+
+        private void ViewAllQuotes_Load(object sender, EventArgs e)
+        {
+            String quoteFile = @"quoteFile.txt";
+            StreamReader Reader = new StreamReader(quoteFile);
+            int row = 0;
+
+            while (Reader.EndOfStream == false)
+            {
+                string rowData = Reader.ReadLine();
+
+                if (rowData.Length > 0)
+                {
+                    string[] values = rowData.Split(',');
+                    ViewQuotesGrid.Rows.Add();
+                    
+                    for (int i = 0; i < 7; i++)
+                    {
+                        ViewQuotesGrid[i, row].Value = values[i];
+                       
+                    }
+                    row++;
+                }
+                else
+                {
+                    MessageBox.Show("Nothing to see here.");
+                }
+
+            }
         }
     }
 }

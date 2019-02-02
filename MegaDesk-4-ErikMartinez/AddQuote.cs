@@ -16,6 +16,26 @@ namespace MegaDesk_3_ErikMartinez
         public AddQuote()
         {
             InitializeComponent();
+
+            //populate surface material com-box 
+            var materials = new List<Desk.Surface>();
+            materials = Enum.GetValues(typeof(Desk.Surface))
+                .Cast<Desk.Surface>()
+                .ToList();
+            surfaceMaterialComboBox.DataSource = materials;
+
+            //set it to none
+            surfaceMaterialComboBox.SelectedIndex = -1;
+
+            //populate surface delivery com-box 
+            var delivery = new List<DeskQuote.Delivery>();
+            delivery = Enum.GetValues(typeof(DeskQuote.Delivery))
+                .Cast<DeskQuote.Delivery>()
+                .ToList();
+            deliveryComboBox.DataSource = delivery;
+
+            //set it to none
+            deliveryComboBox.SelectedIndex = -1;
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -34,14 +54,47 @@ namespace MegaDesk_3_ErikMartinez
         private void addNewQoute_Button_Click(object sender, EventArgs e)
         {
             var desk = new Desk();
+            
             desk.Width = widthNumeric.Value;
             desk.Depth = depthNumeric.Value;
-            desk.Drawers = (int)drawersNumeric.Value;
+            desk.Drawers = drawersNumeric.Value;
             desk.SurfaceMaterial = (Desk.Surface)surfaceMaterialComboBox.SelectedIndex;
-            desk.DeliveryChoice = (Desk.Delivery)deliveryComboBox.SelectedIndex;
+            //desk.DeliveryChoice = (Desk.Delivery)deliveryComboBox.SelectedIndex;
+            
 
-            StreamWriter writer;
-            writer = new StreamWriter("quotes.txt");
+            var deskQoute = new DeskQuote();
+           
+            deskQoute.CustomerName = customerNameTextBox.Text;
+            deskQoute.DeliveryChoice = (DeskQuote.Delivery)deliveryComboBox.SelectedIndex;
+            deskQoute.TimeStamp = DateTime.Now;
+
+            //totalTextBox = 
+            var quote = deskQoute.GetQuoteTotal();
+            deskQoute.QuoteTotal = quote;
+
+            //AddQuoteToFile(deskQoute);
+           
+
+
+            String quoteFile = @"quoteFile.txt";
+            using (StreamWriter writer = File.AppendText(quoteFile))
+                writer.WriteLine
+               (
+               deskQoute.TimeStamp + "," +
+               deskQoute.CustomerName + "," +
+               desk.Width + "," +
+               desk.Depth + "," +
+               desk.Drawers + "," +
+               desk.SurfaceMaterial + "," +
+               deskQoute.DeliveryChoice //+ "," +
+               //quote
+               );
+
+            DisplayQuote displayForm = new DisplayQuote(deskQoute);
+            displayForm.Tag = (MainMenu)Tag;
+            displayForm.Show();
+            this.Close();
+
         }
     }
 }

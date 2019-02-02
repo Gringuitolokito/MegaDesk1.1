@@ -43,8 +43,6 @@
             this.surfaceMaterialComboBox = new System.Windows.Forms.ComboBox();
             this.deliveryLabel = new System.Windows.Forms.Label();
             this.deliveryComboBox = new System.Windows.Forms.ComboBox();
-            this.totalLabel = new System.Windows.Forms.Label();
-            this.totalTextBox = new System.Windows.Forms.TextBox();
             this.widthNumeric = new System.Windows.Forms.NumericUpDown();
             this.depthNumeric = new System.Windows.Forms.NumericUpDown();
             this.drawersNumeric = new System.Windows.Forms.NumericUpDown();
@@ -65,7 +63,7 @@
             // 
             // addNewQoute_Button
             // 
-            this.addNewQoute_Button.Location = new System.Drawing.Point(501, 393);
+            this.addNewQoute_Button.Location = new System.Drawing.Point(506, 393);
             this.addNewQoute_Button.Name = "addNewQoute_Button";
             this.addNewQoute_Button.Size = new System.Drawing.Size(122, 46);
             this.addNewQoute_Button.TabIndex = 7;
@@ -197,24 +195,6 @@
             this.deliveryComboBox.Size = new System.Drawing.Size(165, 28);
             this.deliveryComboBox.TabIndex = 6;
             // 
-            // totalLabel
-            // 
-            this.totalLabel.AutoSize = true;
-            this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.Location = new System.Drawing.Point(463, 306);
-            this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(61, 20);
-            this.totalLabel.TabIndex = 19;
-            this.totalLabel.Text = "Total:  ";
-            // 
-            // totalTextBox
-            // 
-            this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox.Location = new System.Drawing.Point(541, 303);
-            this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(87, 27);
-            this.totalTextBox.TabIndex = 20;
-            // 
             // widthNumeric
             // 
             this.widthNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,7 +244,7 @@
             // drawersNumeric
             // 
             this.drawersNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawersNumeric.Location = new System.Drawing.Point(551, 100);
+            this.drawersNumeric.Location = new System.Drawing.Point(550, 100);
             this.drawersNumeric.Maximum = new decimal(new int[] {
             7,
             0,
@@ -283,8 +263,6 @@
             this.Controls.Add(this.drawersNumeric);
             this.Controls.Add(this.depthNumeric);
             this.Controls.Add(this.widthNumeric);
-            this.Controls.Add(this.totalTextBox);
-            this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.deliveryComboBox);
             this.Controls.Add(this.deliveryLabel);
             this.Controls.Add(this.surfaceMaterialComboBox);
@@ -328,8 +306,6 @@
         private System.Windows.Forms.ComboBox surfaceMaterialComboBox;
         private System.Windows.Forms.Label deliveryLabel;
         private System.Windows.Forms.ComboBox deliveryComboBox;
-        private System.Windows.Forms.Label totalLabel;
-        private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.NumericUpDown widthNumeric;
         private System.Windows.Forms.NumericUpDown depthNumeric;
         private System.Windows.Forms.NumericUpDown drawersNumeric;

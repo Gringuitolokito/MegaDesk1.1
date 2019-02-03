@@ -3,3 +3,7 @@
 2/2/2019 4:54:00 PM,erik,24,12,3,Oak,Normal_14_Days,550.00
 2/2/2019 4:55:39 PM,Erik,24,12,0,Oak,Normal_14_Days,400.00
 2/2/2019 6:11:21 PM,daT,24,12,3,Rosewood,Rush_5_Days,690.00
+2/2/2019 9:03:01 PM,Erik,24,12,2,Oak,Normal_14_Days,500.00
+2/2/2019 9:34:02 PM,Celeste,24,12,7,Veneer,Rush_7_Days,705.00
+2/2/2019 9:44:28 PM,Brother Thayne,24,12,7,Rosewood,Rush_3_Days,910.00
+2/2/2019 9:44:56 PM,Brother Thayne,96,48,7,Rosewood,Rush_3_Days,4608

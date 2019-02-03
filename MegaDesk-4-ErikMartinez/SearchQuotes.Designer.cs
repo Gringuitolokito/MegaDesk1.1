@@ -47,9 +47,11 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(248, 441);
+            this.cancelButton.AutoSize = true;
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.Location = new System.Drawing.Point(641, 75);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(322, 57);
+            this.cancelButton.Size = new System.Drawing.Size(75, 30);
             this.cancelButton.TabIndex = 2;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -59,20 +61,20 @@
             // 
             this.searchComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchComboBox.FormattingEnabled = true;
-            this.searchComboBox.Location = new System.Drawing.Point(342, 70);
+            this.searchComboBox.Location = new System.Drawing.Point(285, 77);
             this.searchComboBox.Name = "searchComboBox";
-            this.searchComboBox.Size = new System.Drawing.Size(121, 28);
+            this.searchComboBox.Size = new System.Drawing.Size(229, 28);
             this.searchComboBox.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 73);
+            this.label1.Location = new System.Drawing.Point(28, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 20);
+            this.label1.Size = new System.Drawing.Size(222, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Search by Surface Material";
+            this.label1.Text = "Search by Surface Material: ";
             // 
             // ViewQuotesGrid
             // 
@@ -137,7 +139,7 @@
             // 
             this.searchButton.AutoSize = true;
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.Location = new System.Drawing.Point(495, 68);
+            this.searchButton.Location = new System.Drawing.Point(560, 75);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 30);
             this.searchButton.TabIndex = 8;

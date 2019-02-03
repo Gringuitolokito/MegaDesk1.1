@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllQuotes));
             this.cancelButton = new System.Windows.Forms.Button();
             this.ViewQuotesGrid = new System.Windows.Forms.DataGridView();
-            this.quote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeliveryChoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SurfaceMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SurfaceMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryChoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ViewQuotesGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(253, 446);
+            this.cancelButton.Location = new System.Drawing.Point(676, 447);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(306, 37);
+            this.cancelButton.Size = new System.Drawing.Size(71, 32);
             this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -71,45 +71,45 @@
             this.ViewQuotesGrid.Size = new System.Drawing.Size(779, 405);
             this.ViewQuotesGrid.TabIndex = 2;
             // 
-            // quote
+            // TimeStamp
             // 
-            this.quote.HeaderText = "Total";
-            this.quote.Name = "quote";
-            // 
-            // DeliveryChoice
-            // 
-            this.DeliveryChoice.HeaderText = "Delivery";
-            this.DeliveryChoice.Name = "DeliveryChoice";
-            // 
-            // SurfaceMaterial
-            // 
-            this.SurfaceMaterial.HeaderText = "Surface Material";
-            this.SurfaceMaterial.Name = "SurfaceMaterial";
-            // 
-            // Drawers
-            // 
-            this.Drawers.HeaderText = "Drawers";
-            this.Drawers.Name = "Drawers";
-            // 
-            // Depth
-            // 
-            this.Depth.HeaderText = "Depth";
-            this.Depth.Name = "Depth";
-            // 
-            // Width
-            // 
-            this.Width.HeaderText = "Width";
-            this.Width.Name = "Width";
+            this.TimeStamp.HeaderText = "Date";
+            this.TimeStamp.Name = "TimeStamp";
             // 
             // CustomerName
             // 
             this.CustomerName.HeaderText = "Customer Name";
             this.CustomerName.Name = "CustomerName";
             // 
-            // TimeStamp
+            // Width
             // 
-            this.TimeStamp.HeaderText = "Date";
-            this.TimeStamp.Name = "TimeStamp";
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            // 
+            // Depth
+            // 
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            // 
+            // Drawers
+            // 
+            this.Drawers.HeaderText = "Drawers";
+            this.Drawers.Name = "Drawers";
+            // 
+            // SurfaceMaterial
+            // 
+            this.SurfaceMaterial.HeaderText = "Surface Material";
+            this.SurfaceMaterial.Name = "SurfaceMaterial";
+            // 
+            // DeliveryChoice
+            // 
+            this.DeliveryChoice.HeaderText = "Delivery";
+            this.DeliveryChoice.Name = "DeliveryChoice";
+            // 
+            // quote
+            // 
+            this.quote.HeaderText = "Total";
+            this.quote.Name = "quote";
             // 
             // ViewAllQuotes
             // 

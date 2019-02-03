@@ -31,20 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllQuotes));
             this.cancelButton = new System.Windows.Forms.Button();
             this.ViewQuotesGrid = new System.Windows.Forms.DataGridView();
-            this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surfaceMaterialComboBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeliveryChoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryChoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SurfaceMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ViewQuotesGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(324, 446);
+            this.cancelButton.Location = new System.Drawing.Point(253, 446);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(306, 37);
             this.cancelButton.TabIndex = 1;
@@ -54,8 +54,6 @@
             // 
             // ViewQuotesGrid
             // 
-            this.ViewQuotesGrid.AllowUserToDeleteRows = false;
-            this.ViewQuotesGrid.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.ViewQuotesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ViewQuotesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TimeStamp,
@@ -63,63 +61,55 @@
             this.Width,
             this.Depth,
             this.Drawers,
-            this.surfaceMaterialComboBox,
+            this.SurfaceMaterial,
             this.DeliveryChoice,
             this.quote});
             this.ViewQuotesGrid.Enabled = false;
-            this.ViewQuotesGrid.Location = new System.Drawing.Point(2, 1);
-            this.ViewQuotesGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.ViewQuotesGrid.Location = new System.Drawing.Point(12, 12);
             this.ViewQuotesGrid.Name = "ViewQuotesGrid";
-            this.ViewQuotesGrid.RowHeadersVisible = false;
-            this.ViewQuotesGrid.Size = new System.Drawing.Size(799, 423);
-            this.ViewQuotesGrid.TabIndex = 3;
-            // 
-            // TimeStamp
-            // 
-            this.TimeStamp.Frozen = true;
-            this.TimeStamp.HeaderText = "Date";
-            this.TimeStamp.Name = "TimeStamp";
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.Frozen = true;
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.Name = "CustomerName";
-            // 
-            // Width
-            // 
-            this.Width.Frozen = true;
-            this.Width.HeaderText = "Width";
-            this.Width.Name = "Width";
-            // 
-            // Depth
-            // 
-            this.Depth.Frozen = true;
-            this.Depth.HeaderText = "Depth";
-            this.Depth.Name = "Depth";
-            // 
-            // Drawers
-            // 
-            this.Drawers.Frozen = true;
-            this.Drawers.HeaderText = "Number of Drawers";
-            this.Drawers.Name = "Drawers";
-            // 
-            // surfaceMaterialComboBox
-            // 
-            this.surfaceMaterialComboBox.Frozen = true;
-            this.surfaceMaterialComboBox.HeaderText = "Surface Material";
-            this.surfaceMaterialComboBox.Name = "surfaceMaterialComboBox";
-            // 
-            // DeliveryChoice
-            // 
-            this.DeliveryChoice.Frozen = true;
-            this.DeliveryChoice.HeaderText = "Delivery";
-            this.DeliveryChoice.Name = "DeliveryChoice";
+            this.ViewQuotesGrid.RowTemplate.Height = 24;
+            this.ViewQuotesGrid.Size = new System.Drawing.Size(779, 405);
+            this.ViewQuotesGrid.TabIndex = 2;
             // 
             // quote
             // 
             this.quote.HeaderText = "Total";
             this.quote.Name = "quote";
+            // 
+            // DeliveryChoice
+            // 
+            this.DeliveryChoice.HeaderText = "Delivery";
+            this.DeliveryChoice.Name = "DeliveryChoice";
+            // 
+            // SurfaceMaterial
+            // 
+            this.SurfaceMaterial.HeaderText = "Surface Material";
+            this.SurfaceMaterial.Name = "SurfaceMaterial";
+            // 
+            // Drawers
+            // 
+            this.Drawers.HeaderText = "Drawers";
+            this.Drawers.Name = "Drawers";
+            // 
+            // Depth
+            // 
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            // 
+            // Width
+            // 
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.Name = "CustomerName";
+            // 
+            // TimeStamp
+            // 
+            this.TimeStamp.HeaderText = "Date";
+            this.TimeStamp.Name = "TimeStamp";
             // 
             // ViewAllQuotes
             // 
@@ -147,7 +137,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Width;
         private System.Windows.Forms.DataGridViewTextBoxColumn Depth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Drawers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surfaceMaterialComboBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SurfaceMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryChoice;
         private System.Windows.Forms.DataGridViewTextBoxColumn quote;
     }

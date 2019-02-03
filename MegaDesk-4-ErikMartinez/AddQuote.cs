@@ -57,7 +57,7 @@ namespace MegaDesk_3_ErikMartinez
             
             desk.Width = widthNumeric.Value;
             desk.Depth = depthNumeric.Value;
-            desk.Drawers = drawersNumeric.Value;
+            desk.Drawers = (int)drawersNumeric.Value;
             desk.SurfaceMaterial = (Desk.Surface)surfaceMaterialComboBox.SelectedIndex;
             //desk.DeliveryChoice = (Desk.Delivery)deliveryComboBox.SelectedIndex;
             
@@ -67,15 +67,13 @@ namespace MegaDesk_3_ErikMartinez
             deskQoute.CustomerName = customerNameTextBox.Text;
             deskQoute.DeliveryChoice = (DeskQuote.Delivery)deliveryComboBox.SelectedIndex;
             deskQoute.TimeStamp = DateTime.Now;
-
-            //totalTextBox = 
+            deskQoute.Desk = desk;
             var quote = deskQoute.GetQuoteTotal();
             deskQoute.QuoteTotal = quote;
 
             //AddQuoteToFile(deskQoute);
            
-
-
+            try { 
             String quoteFile = @"quoteFile.txt";
             using (StreamWriter writer = File.AppendText(quoteFile))
                 writer.WriteLine
@@ -86,10 +84,15 @@ namespace MegaDesk_3_ErikMartinez
                desk.Depth + "," +
                desk.Drawers + "," +
                desk.SurfaceMaterial + "," +
-               deskQoute.DeliveryChoice //+ "," +
-               //quote
+               deskQoute.DeliveryChoice + "," +
+               quote
                );
-
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("There was an error creating your quote. " +
+                    "Please try again later. {0}", err.Message);
+            }
             DisplayQuote displayForm = new DisplayQuote(deskQoute);
             displayForm.Tag = (MainMenu)Tag;
             displayForm.Show();

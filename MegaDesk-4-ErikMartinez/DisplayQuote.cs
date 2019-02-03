@@ -17,13 +17,14 @@ namespace MegaDesk_3_ErikMartinez
 
             InitializeComponent();
 
+            lbDate.Text = deskQuote.TimeStamp.ToString("M/d/yyyy");
             lblCustomerName.Text = deskQuote.CustomerName;
-            //lbWidth;
+            //lbWidth.Text = ;
             //lbDepth;
             //lbDrawers;
             //lbSurfaceMaterial;
-            //lbDelivery;
-            
+            //lbDelivery.Text = deskQuote.DeliveryChoice;
+            lbTotal.Text = deskQuote.QuoteTotal.ToString("C");
 
         }
 

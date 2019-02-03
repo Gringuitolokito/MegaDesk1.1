@@ -1,3 +1,5 @@
-2/1/2019 5:12:08 PM,Test 3,24,12,0,Oak,Rush5Days
-2/1/2019 5:26:12 PM,Erik,24,12,2,Laminate,Normal14Days
-2/1/2019 5:27:16 PM,test3,24,12,1,Laminate,Rush7Days
+2/1/2019 11:26:27 PM,BT,90,40,0,Oak,Rush_3_Days,260.00
+2/2/2019 4:49:17 PM,erik,24,12,3,Veneer,Normal_14_Days,200
+2/2/2019 4:54:00 PM,erik,24,12,3,Oak,Normal_14_Days,550.00
+2/2/2019 4:55:39 PM,Erik,24,12,0,Oak,Normal_14_Days,400.00
+2/2/2019 6:11:21 PM,daT,24,12,3,Rosewood,Rush_5_Days,690.00

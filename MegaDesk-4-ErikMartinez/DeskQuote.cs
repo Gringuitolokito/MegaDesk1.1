@@ -12,6 +12,15 @@ namespace MegaDesk_3_ErikMartinez
         public string CustomerName { get; set; }        
         public DateTime TimeStamp { get; set; }
 
+        public enum Delivery
+        {
+            Rush_3_Days,
+            Rush_5_Days,
+            Rush_7_Days,
+            Normal_14_Days
+        }
+        public Delivery DeliveryChoice { get; set; }
+
         //Pricing structure
         const decimal BASE_DESK_PRICE = 200.00M;
         const decimal DT_SURFACE_AREA = 1.00M;
@@ -38,22 +47,101 @@ namespace MegaDesk_3_ErikMartinez
         const decimal R_7DAY_GT_2000 = 40.00M;
 
         public decimal QuoteTotal { get; set; }
+
+
         public decimal GetQuoteTotal()
         {
-            decimal quotePrice = BASE_DESK_PRICE;
-                       
-            return quotePrice;
+
+            //get the total for the drawers
+            var drawerPrice = DRAWERS * this.Desk.Drawers;
+
+            //get area
+            decimal surfaceArea = this.Desk.Width * this.Desk.Depth;
+
+            if (surfaceArea > 1000)
+            {
+                return surfaceArea;
+            }
+            else
+            {
+                surfaceArea = 0;
+            }
+
+            decimal surfaceMaterialPrice = 0;
+            switch (Desk.SurfaceMaterial)
+            {
+                case Desk.Surface.Oak:
+                    surfaceMaterialPrice = SM_OAK;
+                    break;
+                case Desk.Surface.Laminate:
+                    surfaceMaterialPrice = SM_LAMINATE;
+                    break;
+                case Desk.Surface.Pine:
+                    surfaceMaterialPrice = SM_PINE;
+                    break;
+                case Desk.Surface.Rosewood:
+                    surfaceMaterialPrice = SM_ROSEWOOD;
+                    break;
+                case Desk.Surface.Veneer:
+                    surfaceMaterialPrice = SM_VENEER;
+                    break;
+            }
+
+            decimal deliveryPrice = 0;
+            switch (DeliveryChoice)
+            {
+                case Delivery.Rush_3_Days:
+                    if (surfaceArea < 1000)
+                    {
+                        deliveryPrice = R_3DAY_LT_1000;
+                    }
+                    else if (surfaceArea > 1000 && surfaceArea < 2000)
+                    {
+                        deliveryPrice = R_3DAY_1000_2000;
+                    }
+                    else
+                    {
+                        deliveryPrice = R_3DAY_GT_2000;
+                    }
+                    break;
+                case Delivery.Rush_5_Days:
+                    if (surfaceArea < 1000)
+                    {
+                        deliveryPrice = R_5DAY_LT_1000;
+                    }
+                    else if (surfaceArea > 1000 && surfaceArea < 2000)
+                    {
+                        deliveryPrice = R_5DAY_1000_2000;
+                    }
+                    else
+                    {
+                        deliveryPrice = R_5DAY_GT_2000;
+                    }
+                    break;
+                case Delivery.Rush_7_Days:
+                    if (surfaceArea < 1000)
+                    {
+                        deliveryPrice = R_7DAY_LT_1000;
+                    }
+                    else if (surfaceArea > 1000 && surfaceArea < 2000)
+                    {
+                        deliveryPrice = R_7DAY_1000_2000;
+                    }
+                    else
+                    {
+                        deliveryPrice = R_7DAY_GT_2000;
+                    }
+                    break;
+                default:
+                    deliveryPrice = 0;
+                    break;
+            }
+
+            //quote price
+            decimal quoteprice = BASE_DESK_PRICE + drawerPrice +
+                surfaceArea + surfaceMaterialPrice + deliveryPrice;
+
+            return quoteprice;
         }
-
-        public enum Delivery
-        {
-            Rush_3_Days,
-            Rush_5_Days,
-            Rush_7_Days,
-            Normal_14_Days
-        }
-        public Delivery DeliveryChoice { get; set; }
-
-
     }
 }

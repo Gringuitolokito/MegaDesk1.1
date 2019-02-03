@@ -41,6 +41,10 @@
             this.lbSurfaceMaterial = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbDelivery = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -157,17 +161,61 @@
             // 
             this.lbDelivery.AutoSize = true;
             this.lbDelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDelivery.Location = new System.Drawing.Point(210, 241);
+            this.lbDelivery.Location = new System.Drawing.Point(210, 242);
             this.lbDelivery.Name = "lbDelivery";
             this.lbDelivery.Size = new System.Drawing.Size(70, 20);
             this.lbDelivery.TabIndex = 12;
             this.lbDelivery.Text = "Delivery";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(154, 52);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Date:";
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Location = new System.Drawing.Point(210, 52);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(45, 20);
+            this.lbDate.TabIndex = 14;
+            this.lbDate.Text = "Date";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(153, 274);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 20);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Total:";
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(210, 274);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(46, 20);
+            this.lbTotal.TabIndex = 16;
+            this.lbTotal.Text = "Total";
             // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 642);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbDate);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.lbDelivery);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lbSurfaceMaterial);
@@ -203,5 +251,9 @@
         private System.Windows.Forms.Label lbSurfaceMaterial;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbDelivery;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbTotal;
     }
 }

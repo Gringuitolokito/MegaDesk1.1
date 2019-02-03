@@ -46,7 +46,7 @@ namespace MegaDesk_3_ErikMartinez
                     string[] values = rowData.Split(',');
                     ViewQuotesGrid.Rows.Add();
                     
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 0; i < 8; i++)
                     {
                         ViewQuotesGrid[i, row].Value = values[i];
                        

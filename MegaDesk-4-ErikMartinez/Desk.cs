@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 namespace MegaDesk_3_ErikMartinez
 {
     public class Desk
-    {
-        public decimal Width { get; set; }
-        public decimal Depth { get; set; }
-        public decimal Drawers { get; set; }
-        
+    {        
         //Enums
         public enum Surface
         {
@@ -21,6 +17,10 @@ namespace MegaDesk_3_ErikMartinez
             Veneer,
             Pine
         }
+        public decimal Width { get; set; }
+        public decimal Depth { get; set; }
+        public int Drawers { get; set; }
+
         public Surface SurfaceMaterial { get; set; }
 
         
